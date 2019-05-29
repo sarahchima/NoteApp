@@ -3,8 +3,8 @@ import Button from './Button';
 
 const textArea = {
     width: "100%",
-    height: "400px",
     border:  "0",
+    height: "calc(100vh - 200px)",
     padding: "20px",
     background: "inherit",
     color: "white",
@@ -30,8 +30,6 @@ class EditField extends Component {
         })
     }
     handleSave = () => {
-        console.log(this.state.note)
-
         if(this.state.note !== "") {
             this.props.handleSave(this.state.note)
         }
@@ -45,7 +43,8 @@ class EditField extends Component {
 
         const { note } = this.props
         return (
-            <div>
+            <div className="edit-field">
+                <h3 className="notes-header">Write Note </h3>
                 <input className="title-input" name="title" onChange={this.props.handleChange} value={note.title} placeholder="Title"/>
                 <textarea style={textArea} name="text" onChange={this.props.handleChange} placeholder="Write a note" value={note.text}></textarea>
                 <Button text="Save" handleClick={this.props.handleSave}/>

@@ -2,20 +2,22 @@ import React, { Component } from 'react';
 import NoteCard from './NoteCard';
 
 class Notes extends Component {
-
-
     render() {
-        const { noteItems, handleNotesClick } = this.props;
-
-        console.log("this"+noteItems)
-        let count = 0;
+        const { noteItems, handleNotesClick, handleNoteDelete } = this.props;
         return (
-            <div>{ noteItems && noteItems.map(note => {
-                count++;
-                return (
-                    <NoteCard key={count} handleNotesClick={handleNotesClick} note={note} />
-                )
-            })}
+            <div>
+                <h3 className="notes-header">All Notes </h3>
+                { noteItems && noteItems.map(note => {
+                    return (
+                        <NoteCard 
+                            key={note.id} 
+                            id={note.id} 
+                            handleNotesClick={handleNotesClick} 
+                            note={note} 
+                            handleNoteDelete={handleNoteDelete}
+                        />
+                    )
+                })}
             </div>
         )
     }
