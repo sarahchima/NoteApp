@@ -1,4 +1,4 @@
-NoteApp is a note-taking app built with React.
+NoteApp is a note-taking app built with React and uses local storage to save notes.
 
 Some Features of it are:
 1. Add new note
