@@ -1,6 +1,6 @@
 {
   "name": "note-app",
-  "homepage" : "http://sarahchima.github.io/note-app",
+  "homepage" : "http://sarahchima.github.io/NoteApp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
