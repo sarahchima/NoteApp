@@ -30,8 +30,6 @@ class EditField extends Component {
         })
     }
     handleSave = () => {
-        console.log(this.state.note)
-
         if(this.state.note !== "") {
             this.props.handleSave(this.state.note)
         }
